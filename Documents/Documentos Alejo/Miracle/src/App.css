@@ -1,0 +1,686 @@
+*{ 
+  box-sizing: border-box; 
+}
+
+
+body{
+  font-family: 'Roboto Mono', monospace;
+  font-family: 'Cedarville Cursive', cursive;
+  font-family: 'Roboto Mono', monospace;  
+}
+.Nav {
+  background: linear-gradient(
+    90deg,
+    rgba(81, 151, 11, 1),
+    rgba(178, 134, 13,1 ) 100px,
+  
+    rgb(217, 123, 15) 
+  );
+  border: solid #FBF6EE;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  color: whitesmoke;
+  padding: 5px;
+  z-index: 2;
+  font-family: 'Roboto Mono', monospace;
+  position:fixed;
+  width: 100%;
+  height: 110px;
+  top: 0;
+}
+.content {
+  padding-top: 99px; /* Ajusta según la altura de tu barra de navegación y cualquier espacio adicional necesario */
+  transition: padding-top 0.3s ease; /* Efecto de transición suave */
+}
+
+#mobileNav{
+  background: linear-gradient(
+    90deg,
+    rgba(81, 151, 11, 0.5),
+    rgba(178, 134, 13, 0.5) 100px,
+  
+    rgb(217, 123, 15) 
+  );
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: whitesmoke;
+  font-family: 'Roboto Mono', monospace;
+  position: absolute;
+  top: 60px; /* Ajusta la distancia desde la parte superior según tus necesidades */
+  left: 0;
+  width: 430px;
+  z-index: 1;
+}
+.mobileNav ul {
+  padding: 0%; 
+  
+}
+.mobileNav li {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0px 0px;
+  margin: 3px ;
+}
+.mobileNav a {
+  text-decoration: none;
+  color: white;
+  font-size: 10px;
+  top: 20px;
+ 
+ 
+}
+
+@media screen and (max-width:431px) {
+  .titulos {
+      display:none;
+  } 
+  .logotipo{
+    transform: scale(0.6);
+  }
+  .Nav{
+    width: 430px;
+  }
+}
+@media screen and (min-width:431px) {
+  .mobileNav ul li a{
+      display:none;
+  } 
+
+
+}
+
+.hamburguer{
+font-size: 40px;
+position: relative;
+bottom: 0px;
+right: 10px;
+cursor: pointer;
+margin-left: 7px;
+}
+
+.hamburguer.open span {
+  color: #B6BBC4;
+}
+@media screen and (min-width:431px) {
+  .hamburguer{
+      display:none;
+  } 
+  
+}
+
+.logotipo img {
+  z-index: 1;
+  border-radius: 10%;
+  height: 95px;
+  cursor: pointer;
+
+}
+
+.titulo{
+    
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    
+  }
+
+  .foto{
+    object-fit: cover;
+    height: 750px;
+    width: 100%;
+    clip-path: inset(0px 0px 0 0px);
+   
+	object-fit: cover;
+	
+  }
+.triunfo{
+  font-size: 80px;
+  text-align: center;
+  background-color: #31304D;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 40%;
+  height: 50%;
+  left: 120px;
+  top: 70px;
+  border-radius: 90px 0px 90px 0px;
+  -moz-border-radius: 90px 0px 90px 0px;
+  -webkit-border-radius: 90px 0px 90px 0px;
+  border: 0px solid #000000;
+  padding-top: 50px;
+  color: #ccc;
+  transition: color 0.3s ease-in-out;
+  font-family: 'Roboto Mono', monospace;
+
+}
+
+.triunfo:hover{
+  color: #ffffff;
+}
+.parrafo{
+  font-size: 20px;
+  text-align: left;
+  column-count: 6;
+  padding: 20px;
+}
+@media screen and (max-width:431px) {
+  .triunfo {
+        font-size: 45px;
+        width: 70%;
+       border-radius: 5%;
+        border: 0px solid #000000;
+        left: 15%;
+        height: 260px;
+        color: whitesmoke;
+        top: 150px;
+        
+  } 
+  .parrafo{
+    font-size: 8px;
+  }
+  .foto{
+    width: 430px;
+    
+  }
+  .titulo{
+    height: 500px;
+  }
+}
+
+ ul {
+  list-style: none;
+  display: flex;
+}
+
+ ul li {
+  margin-right: 20px;
+  font-size: 40px;
+}
+
+ ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  
+}
+
+ ul li a:hover {
+  color: #B6BBC4;
+}
+
+/* Alinea los elementos ul y li a la derecha */
+.titulos {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+ul li a:hover{
+  color: #B6BBC4;
+}
+.agua{
+  position: absolute;
+  z-index: -1;
+  margin-top: 0;
+}
+.agua img{
+  width: 2500px;
+  height: 1200px;
+}
+.productos{
+ 
+  background: linear-gradient(
+    90deg,
+    rgba(81, 151, 11, 0.5),
+    rgba(178, 134, 13, 0.5) 100px,
+  
+    rgb(217, 123, 15) 
+  );
+  
+  padding-bottom: 120px;
+  border: 5px solid whitesmoke;
+  display: flex;
+  flex-direction: column;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  
+}
+
+
+
+
+
+.textoProducto h2{
+  text-align: center;
+  font-size: 75px;
+  margin-top: 0px;
+  color: whitesmoke;
+  transition:color 0.3s ease-in-out ;
+  transform: skew(-10deg);
+  position: relative;
+  padding-top: 100px;
+}
+
+.textoProducto h2:hover{
+  color: #cdcbcb;
+}
+.textoProducto p{
+  text-align: center;
+  color: whitesmoke;
+  font-family: 'Bungee Spice', sans-serif;
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 35px;
+  transition:color 0.3s ease-in-out ;
+  position: relative;
+ 
+}
+.textoProducto p:hover{
+  color:#cdcbcb;
+}
+
+.botonProducto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+  padding-top: 10px; 
+ 
+}
+.botonProducto button {
+  padding: 1px 0px; /* Ajusta el relleno (padding) de los botones */
+  margin: 0 50px; /* Espacio entre los botones */
+  font-size: 45px; /* Tamaño de la fuente */
+  background-color: #d27913; /* Color de fondo del botón */
+  color: #f7f7f7; /* Color del texto del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  
+}
+.botonProducto button img {
+  
+  
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+ 
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  border: solid whitesmoke 20px;
+  -webkit-box-shadow: 0px 32px 30px 7px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 32px 30px 7px rgba(0,0,0,0.75);
+box-shadow: 0px 32px 30px 7px rgba(0,0,0,0.75);
+  
+}
+.vermas{
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+ 
+  margin: 0 ;
+  margin-top: 170px;
+  z-index: 1;
+ 
+}
+
+.vermas button{
+  background-color: rgba(54, 143, 67, 0.5);
+  font-size: 20px;
+  padding: 30px 90px;
+  font-size: 30px;
+  border-radius: 105px 105px 105px 105px;
+  -moz-border-radius: 105px 105px 105px 105px;
+  -webkit-border-radius: 105px 105px 105px 105px; 
+  border: 5px solid #000000;
+  border: solid 2px black;
+  color: whitesmoke;
+  border: solid whitesmoke 2px;
+  -webkit-box-shadow: 0px 32px 30px 7px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 32px 30px 7px rgba(0,0,0,0.75);
+  box-shadow: 0px 32px 30px 7px rgba(0,0,0,0.75);
+  font-family: 'Roboto Mono', monospace;
+  z-index: 1;
+
+}
+.vermas button:hover{
+  background-color: rgba(45, 117, 56, 0.5);
+  cursor: pointer;
+  color: #fff; /* Texto blanco para contraste */
+}
+
+@media screen and (max-width:431px) {
+  .productos{
+    height: 600px;
+  }
+  .textoProducto h2{
+   font-size: 40px;
+   padding-top: 100px;
+  }
+  .textoProducto p{
+    font-size: 20px;
+  }
+  .botonProducto  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right:100px;
+    bottom: 50px;
+    margin-top:-100px;
+
+  font-size: 10px;  
+  transform:scale(0.6);
+  
+  
+  
+  
+  padding: 0;
+  } 
+  .botonProducto button{
+    
+    margin: 0 100px;
+    font-size: 45px;
+    width: 5px;
+    transform:scale(0.4);
+    color: transparent
+    
+    
+  }
+ 
+  .vermas{
+    transform:scale(0.3);
+    margin: -170px 10px 0;
+    font-size: 30px;  
+    padding: 0;
+    
+  }
+  .vermas button{
+    margin: 0 100px; /* Espacio entre los botones */
+    font-size: 40px; /* Tamaño de la fuente */
+   
+    
+  }
+  .botonProducto button img{
+    transform: scale(1.1);
+}
+  .agua img{
+    width: 410px;
+    height: 700px;
+    
+  }
+
+}
+
+
+.botonProducto img{
+  height: 400px;
+  width: 400px;
+  border-radius: 5%;
+  
+
+}
+
+
+.proyectos{
+  
+  height: 850px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(81, 151, 11, 0.5),
+    rgba(178, 134, 13, 0.5) 100px,
+  
+    rgb(217, 123, 15) 
+  );
+  padding-bottom: 50px;
+  padding-top: 0px;
+  border: 5px solid whitesmoke;
+}
+
+@media screen and (max-width: 431px) {
+  .proyectos h2 {
+    transform: scale(0.6); /* Corrige el uso de transform: scale() */
+    margin-top: 20px;
+  }
+  .proyectos{
+    height: 550px;
+  }
+  .Nav {
+    height: 70px;
+  }
+
+  .proye img {
+    height: 550px !important;
+    max-width: 410px;
+    width: 100%;
+  }
+
+  .column {
+    width: 100px;
+    flex-grow: 1;
+    padding: 20px !important;
+    margin:5px !important;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  /* Ajusta el tamaño de letra para los elementos .column */
+  .column h4 {
+    font-size: 15px !important; /* Usa !important para aumentar la especificidad */
+  }
+
+  .column p {
+    font-size: 5px !important; /* Usa !important para aumentar la especificidad */
+  }
+}
+
+
+.textoProyectos {
+  transform: skew(-5deg);
+  
+  color:rgba(47, 125, 59, 1);
+  text-align: center;
+  font-size: 60px;
+  padding-top: 10px;
+  margin-top: 30px;  
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+.proye{
+  position: absolute;
+  z-index: -0.5;
+  margin-top: 0;
+
+}
+
+.proye img{
+  width: 2500px;
+  height: 850px;
+
+}
+
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.column {
+  background-color: rgba(47, 125, 59, 0.6);
+  margin: 50px; /* Espacio entre columnas */
+  padding: 10px; /* Espacio dentro de las columnas */
+  color: white; /* Color del texto */
+  flex: 1;
+  max-width: 600px;
+  border-radius: 5%;
+  position: relative;
+
+}
+.column:hover{
+  background-color: rgba(45, 117, 56, 0.5);
+
+  color: #fff; /* Texto blanco para contraste */
+}
+
+.column h4{
+  color: whitesmoke;
+  font-size: 37px;
+  text-align: center;
+}
+.column p{
+  text-align: center;
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+
+.conta{
+  position: absolute;
+  z-index: -1;
+  margin-top: 0;
+
+}
+
+.conta img{
+  width: 2000px;
+  height: 870px;
+
+}
+.contacto{
+  
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border: 2px solid whitesmoke;
+  color:white;
+  background-image: linear-gradient(
+    90deg,
+    rgba(81, 151, 11, 0.2),
+    rgba(178, 134, 13, 0.2) 100px,
+  
+    rgb(217, 123, 15) 
+  );
+  text-align: center;
+  font-size: 28px;
+  padding-bottom: 50px;
+}
+@media screen and (max-width:431px) {
+  .contacto{
+    height: 550px;
+  }
+  .contacto form {
+    scale: 0.4;
+    margin-top: -180px;
+  } 
+}
+
+@media screen and (max-width:431px) {
+  .contacto h3 {
+    scale: 0.6;
+    
+  } 
+}
+@media screen and (max-width:431px) {
+  .contacto p {
+    scale: 0.5;
+    margin-top: -50px;
+  } 
+  .conta img{
+    max-width: 700px;
+    width: 410px;
+    height: 550px;
+    
+  }
+  .socialMedia img{
+    scale: 0.6;
+  }
+}
+
+.contacto h3{
+  font-size: 50px;
+  margin-top: 20px;
+  padding-top: 60px;
+}
+textarea {
+  width: 50%;
+  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border: 3px solid #ccc;
+  border-radius: 15px;
+  font-size: 25px;
+  resize: vertical; /* Permite ajustar verticalmente */
+  background: transparent;
+  color: whitesmoke;
+  
+
+}
+
+/* Estilos cuando el textarea tiene foco */
+textarea:focus {
+  outline: none;
+  border-color: #ffffff; /* Cambia el color del borde al tener foco */
+}
+.correo{
+  background: transparent;
+  color: whitesmoke;
+  border: 3px solid #ccc;
+  font-size: 22px;
+  border-radius: 5%;
+  padding-top: 10px;
+  resize: vertical;
+  margin-bottom: 20px;
+  
+}
+.correo:focus {
+  outline: none;
+  border-color: #ffffff; /* Cambia el color del borde al tener foco */
+}
+
+.enviar{
+  display: block;
+  margin: 0 auto;
+  background: transparent;
+  color: whitesmoke;
+  border: 3px solid #ccc;
+  font-size: 25px;
+  border-radius: 5%;
+  
+  height: 40px;;
+  width: 10%;
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.socialMedia{
+  border: 2px solid whitesmoke;
+  background-image: linear-gradient(
+    90deg,
+    rgba(81, 151, 11, 0.2),
+    rgba(178, 134, 13, 0.2) 100px,
+  
+    rgb(217, 123, 15) 
+  );
+  display: flex; /* Utiliza flexbox */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  gap: 20px; /* Espacio entre los elementos */
+  padding: 10px;
+}
+
+.socialMedia img {
+  border-radius: 50%; /* Redondea las imágenes */
+  border: 2px white solid;
+  /* Otros estilos que desees agregar */
+
+}
+.socialMedia img:hover{
+  transform: scale(1.1);
+}
+
